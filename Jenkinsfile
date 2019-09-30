@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh 'python --version'
                 echo "hello world!"
-		echo $DB_ENGINE
+		sh 'printenv'
             }
         }
     }

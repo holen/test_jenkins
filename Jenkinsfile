@@ -17,6 +17,13 @@ pipeline {
 		// sh 'printenv'
             }
         }
+
+	stage('Sanity check') {
+            steps {
+                input "Does the build look ok?"
+            }
+        }
+
         stage('Test') {
             steps {
 		// 打印指定的环境变量

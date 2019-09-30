@@ -12,6 +12,7 @@ pipeline {
                 sh 'python --version'
                 echo "hello world!"
 		sh 'printenv'
+		print(env.DB_ENGINE)
             }
         }
     }

@@ -32,7 +32,7 @@ pipeline {
 	    // 通过 archiveArtifacts 步骤和文件匹配表达式可以很容易的完成构建结果记录和存储
 	    // archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
 	    // 收集我们的测试结果
-	    // junit 'reports/*.xml'
+	    junit 'reports/*.xml'
         }
         success {
             echo 'This will run only if successful'

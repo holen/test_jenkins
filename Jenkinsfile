@@ -1,10 +1,17 @@
 pipeline {
     agent { docker 'python:3.5.1' }
+
+    environment {
+        DISABLE_AUTH = 'true'
+        DB_ENGINE    = 'mysql'
+    }
+
     stages {
         stage('build') {
             steps {
                 sh 'python --version'
                 echo "hello world!"
+		echo $DB_ENGINE
             }
         }
     }
